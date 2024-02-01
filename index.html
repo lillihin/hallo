@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="mobile">
+        <!-- burger menu bei smart phone-->
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+                <!-- Overlay content -->
+                <div class="overlay-content">
+                <a href="CV.html" >me in a nutshell </a>
+                <a href="my_work.html">my work </a>
+                    <a href="contact.html">contact </a>
+                </div>
+         </div>
+
+         <!-- Use any element to open/show the overlay navigation menu -->
+        <span onclick="openNav()" style="font-size: 50px;display: flex;
+        justify-content: flex-end;
+        align-items: center;">&#9776
+        </span>
+
+    </header>
+
+    <header class="desktop">
+
+            <a class="home" href="index.html"> Lilli Hinterleithner </a>
+            <nav class="navbar">
+              
+                <a href="CV.html" >me in a nutshell </a>
+                <a href="my_work.html">my work </a>
+                <a href="contact.html">contact </a>
+            </nav>
+        
+        </header>
+
+    </header>
+    <main>
+            <section class="hallo">
+                <video autoplay loop muted>
+                <source src="image/Unbenanntes_Projekt.mp4" type="video/mp4">
+                </video> 
+            
+                <article>
+                <h1>Hi ich bin Lilli. <br> Grafikdesignerin, <br> Psychologin (MSc) <br> und kreativer Kopf in Wien.  </h1>
+                <h2> Das ist mein Portfolio – schau dich ruhig um. </h2>
+            
+                <p> Ich bin 24 Jahre (geb. 02.09.1999) alt und vorsechs Jahren von Nürnberg nach Wien gezogen. Heute hab ich meinen Psychologie Master abgeschlossen und habe eine Diplom in Grafik-und Kommunikationsdesign. Gemeinsam bilden diese beiden Bereiche meine große Leidenschaft und überraschen mich selbst immer wieder, welche Überschneidungen es im Design und dem menschlichen Innenleben gibt. Ich würde mich selber als kreativen Kopf bezeichnen, der gar nicht die Zeit hat, all die Ideen umzusetzen, die in ihm wohnen. 
+                    
+                    Kreativität ist schon seit den ersten Kindertagen meine Leidenschaft und in den letzten Jahren habe ich diese Leidenschaft durch mein Studium sowie autodidaktisch geformt, sortiert und optimiert.
+                    Meine vielseitige Expertise in den Bereichen Werbung und Marketing zeichnet sich durch
+                    eine bunte aber professionelle und Mischung aus tiefgehenden psychologischem Verständnis und kreativem Marketing aus. Diese Kombination ermöglicht es mir, innovative und wirkungsvolle Ansätze zu entwickeln.</p>
+                </article>
+            </section>
+
+            <section class="scroll">
+
+                <h2>Highlights</h2>
+            
+                <div class="slider" x-data="{start: true, end: false}">
+                    <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft 
+                    == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) 
+                    < 5 ? end = true : end = false;">
+                    
+                    <div class="slider__item">
+                        <img class="slider__image" src="projekte/bahö/cover.png" alt="image" >
+                        <div class="slider__info">
+                        <a class="galerie" href="#about"> Weinettiket</a>
+                        </div>
+                    </div>
+            
+                    <div class="slider__item">
+                        <img class="slider__image" src="favicon.ico" alt="Image">
+                        <div class="slider__info">
+                        <a class="galerie" href="#about">Magazin</a>
+                        </div>
+                    </div>
+            
+                    <div class="slider__item">
+                        <img class="slider__image" src="favicon.ico" alt="Image">
+                        <div class="slider__info">
+                        <a class="galerie" href="#about">Werbekampagne Männerinfo.at</a>
+                        </div>
+                    </div>
+            
+                    <div class="slider__item">
+                        <img class="slider__image" src="favicon.ico" alt="Image">
+                        <div class="slider__info">
+                        <a class="galerie" href="#about">Bahö Podcast Kampagne</a>
+                        </div>
+                    </div>
+            
+                    <div class="slider__item">
+                        <img class="slider__image" src="favicon.ico" alt="Image">
+                        <div class="slider__info">
+                        <a class="galerie" href="#about">Freecards Graphische</a>
+                        </div>
+                    </div>
+            
+                    <div class="slider__item">
+                        <img class="slider__image" src="favicon.ico" alt="Image">
+                        <div class="slider__info">
+                        <a class="galerie" href="#about">Schnapsdose</a>
+                        </div>
+                    </div>
+            
+            
+                    </div>
+                    
+                    </div>
+                </div>
+            </section class="scroll">
+     </main>       
+            
+        <footer>
+           <p class="footer">  &copy; 2023 Lilli Hinterleithner. Alle Rechte vorbehalten. <br> coded by myself  </p>
+          
+        </footer>
+      
+        <script>
+          /* Open when someone clicks on the span element */
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+      
+      /* Close when someone clicks on the "x" symbol inside the overlay */
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+        </script>
+</body>
+</html>

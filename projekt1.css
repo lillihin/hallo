@@ -1,0 +1,70 @@
+.vorschau  {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+
+    margin-bottom: 2em;
+    padding-top: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.lilli video{
+    width: 100%;
+}
+
+aside {
+    padding: 2em;
+}
+
+@media only screen and (min-width: 1000px) {
+    main {
+        margin-top: 5em;
+        margin-bottom: 5em;
+        
+      }
+    
+      #beschreibung {
+        display: flex;
+        ;
+        flex: 1;
+        margin: auto;
+        margin-left: 5em;  
+        margin-right: 5em;     
+        
+        justify-content: center;
+        outline-style: solid;
+        outline-color: #2b2b2b;
+        
+        }
+    
+      #beschreibung > article {
+        flex: 1;
+        order: 1;
+        display: flex;
+        margin-top: 0;
+
+          justify-content: center;
+          align-items: center;
+          max-width: 66vw;
+
+      }
+    
+      #beschreibung > aside {
+        flex: 0 0 33vw;
+        padding-left: 2em;
+        margin-top: 2em;
+        /* outline-color: #2b2b2b; */
+        z-index: 1;
+        order: 2;
+        }
+      }
+
+      #beschreibung p {
+        margin: 0;
+        padding: 0;
+      }

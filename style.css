@@ -1,0 +1,403 @@
+@import url("https://use.typekit.net/naw5hqg.css");
+@import url("https://use.typekit.net/mvl3szy.css");
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100;200;500&display=swap');
+
+.desktop {
+    display: none;
+}
+
+/* burger menue */
+/* The Overlay (background) */
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: blue; /* Black fallback color */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-family: 'Unbounded';
+    font-weight: 200;
+    font-size: 20pt;
+    color: #efefef;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: red
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+
+  .hallo video {
+    width: 100%;
+    margin: auto;
+  }
+
+  article {
+    padding: 1vh;
+  }
+
+   h1 {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 600;
+    font-size: 20pt;
+    line-height: 20pt;
+    margin: 0;
+  }
+
+   h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 12pt;
+    line-height: 12pt;
+    font-weight: 200;
+  }
+
+  h3 {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 600;
+    font-size: 20pt;
+    line-height: 30pt;
+    text-align: center;
+    margin: 0px;
+    text-transform: uppercase;
+    color: blue;
+  }
+
+  p {
+    font-family: 'Poppins';
+    font-size: 9pt;
+  }
+
+  .scroll {
+    padding: 1vh;
+  }
+
+  .scroll h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 12pt;
+    line-height: 12pt;
+    font-weight: 400;
+  }
+
+   .scroll {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 2em;
+    }
+
+  .galerie {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: 'Poppins';
+    font-size: 11pt;
+    line-height: 16.5px; 
+  }
+
+  .galerie:hover {
+    color: #FEFEFE;
+  }
+
+  :root {
+    --scrollcolor: rgb(0, 0, 255);
+    --scrollbackground: rgba(0, 0, 255, 0.306);
+  }
+  
+  
+  .slider {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .slider__content {
+    margin: 0;
+
+    overflow-x: scroll;
+    -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 4rem;
+    padding-bottom: 1rem;
+    scrollbar-color: var(--scrollcolor) var(--scrollbackground);
+  }
+  .slider__content::-webkit-scrollbar {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 1rem;
+    background: var(--scrollbackground);
+  }
+  .slider__content::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: var(--scrollcolor);
+  }
+  .slider__content::-webkit-scrollbar-track {
+    border-radius: 1rem;
+    background: var(--scrollbackground);
+  }
+  
+  .slider__item {
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: 100%;
+    width: 100%;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 1;
+  }
+  @media (min-width: 460px) {
+    .slider__item {
+      
+      min-width: calc((100% / 2) - 2rem);
+    }
+  }
+  @media (min-width: 940px) {
+    .slider__item {
+      min-width: calc((100% / 3) - 4rem);
+    }
+  }
+  
+  .slider__image {
+    display: block;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .slider__info {
+    position: relative;
+    padding: 4rem 2rem 2rem;
+    /* background: linear-gradient(to top, rgba(0, 0, 255, 0.749), rgba(0, 0, 225, 0)); */
+  }
+  .slider__info h2 {
+    color: #fff;
+    font-family: system-ui;
+    line-height: 1.1;
+    font-weight: 300;
+    font-size: 1.75rem;
+    margin: 0;
+  }
+  
+  .slider__nav {
+    margin: 1rem 0 4rem;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
+  @media (min-width: 460px) {
+    .slider__nav {
+      justify-content: flex-end;
+    }
+  }
+  
+  .slider__nav__button {
+    margin: 0;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border: 0;
+    border-radius: 2rem;
+    background: #fff;
+    color: #203239;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    line-height: 1;
+    pointer-events: none;
+    transition: 0.2s ease-out;
+    opacity: 0.25;
+  }
+  .slider__nav__button--active {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  footer {
+    background-color:#2b2b2b;
+    color: #FEFEFE;
+    padding: 2em;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+
+  }
+
+  .typewriter h3 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    /* border-right: .15em solid orange; The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0; /* Adjust as needed */
+    animation: 
+      typing 7s steps(40, end),
+      blink-caret .75s step-end infinite;
+    font-size: 1em;
+  }
+    
+    /* The typing effect */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+  @media only screen and (min-width: 1000px) {
+    .typewriter h3 {
+        font-size: 40px;
+        margin-top: 1em;
+      }
+    .mobile {
+        display: none;
+    }
+
+    .desktop {background-color: #FEFEFE;
+        padding: 20px;
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-top: 70px;
+        margin-bottom: 0;
+        font-family: 'Unbounded';
+        font-weight: 200;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        /* position: relativ; */
+        z-index: 99;
+            top: 0; /* Abstand vom oberen Rand des Bildschirms */
+      }
+    
+      .home{
+        font-family: 'Unbounded', sans-serif;
+        color: #2b2b2b;
+        font-weight: 600;
+        font-size: 30pt;
+        line-height: 30pt;
+        margin: 0;
+        text-decoration: none;
+      }
+      
+      .home:hover {
+        color:rgb(0, 0, 255);
+        
+      }
+    
+      .navbar {
+        overflow: hidden;
+        
+      }
+      
+      .navbar a {
+        float: left;
+        display: block;
+        color:#2b2b2b;
+        text-align: center;
+        padding: 15px 20px;
+        text-decoration: none;
+      }
+      
+      .navbar a:hover {
+        background-color: rgb(0, 0, 255);
+        color:#FEFEFE;
+      }
+
+      .hallo {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: flex-start;
+        align-items: flex-start;
+        margin: 10vh;
+      }
+    
+    article {
+      padding: 0;
+      margin-top: 1.25em;
+      margin-bottom: 1.25em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    h1 {
+        font-size: 30pt;
+        line-height: 30pt;
+        margin: 0;
+    }
+    h2 {
+        font-size: 18pt;
+        line-height: 22pt;
+        margin: 0;
+        padding-bottom: 30px;
+        font-style: normal;
+      }
+    
+      .scroll h2 {
+        font-size: 18pt;
+        line-height: 22pt;
+        font-weight: 400;
+        color: #2b2b2b;
+        margin: 0;
+        padding-left: 83px ;
+        padding-bottom: 30px;
+        font-style: normal;
+
+      }
+    
+    p {
+        font-family: 'Poppins';
+        font-size: 11pt;
+        padding-right: 30vh;
+      }
+
+    }
+        
