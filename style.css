@@ -6,7 +6,46 @@
 .desktop {
     display: none;
 }
+.mobile a{
+  font-family: 'unbounded';
+  font-weight: 600;
+  font-size: 18pt;
+  text-decoration: none;
+  color: #2b2b2b;
+  margin: 0;
+  padding: 0;
 
+  
+}
+
+.mobile a:hover, .mobile a:focus{
+  color: blue;
+}
+
+span {
+  cursor: pointer;
+  color: #2b2b2b;
+  font-family: 'unbounded';
+  font-size:25px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end; 
+  
+}
+
+span:hover{
+  color: blue;
+}
+
+.header_mobile {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 /* burger menue */
 /* The Overlay (background) */
 
@@ -46,7 +85,7 @@
   
   /* When you mouse over the navigation links, change their color */
   .overlay a:hover, .overlay a:focus {
-    color: red
+    color: #efefef79
   }
   
   /* Position the close button (top right corner) */
@@ -131,10 +170,12 @@
     font-family: 'Poppins';
     font-size: 11pt;
     line-height: 16.5px; 
+    color: #efefef
   }
 
   .galerie:hover {
-    color: #FEFEFE;
+    color: #fefefe7c;
+    
   }
 
   :root {
@@ -187,6 +228,10 @@
     position: relative;
     aspect-ratio: 1;
   }
+
+
+
+
   @media (min-width: 460px) {
     .slider__item {
       
@@ -201,18 +246,21 @@
   
   .slider__image {
     display: block;
-    height: 100%;
+    margin: auto;
+    width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
   }
+
+  
   
   .slider__info {
     position: relative;
     padding: 4rem 2rem 2rem;
-    /* background: linear-gradient(to top, rgba(0, 0, 255, 0.749), rgba(0, 0, 225, 0)); */
+    background: linear-gradient(to top, #2b2b2b, rgba(0, 0, 225, 0));
   }
   .slider__info h2 {
     color: #fff;
