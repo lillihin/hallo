@@ -6,6 +6,8 @@
 body {
   width: 100%;
   overflow: auto;
+  margin: 0;
+  padding: 0;
 }
 .desktop {
     display: none;
@@ -233,7 +235,9 @@ span:hover{
     aspect-ratio: 1;
   }
 
-
+footer{
+  padding: 0;
+}
 
 
   @media (min-width: 460px) {
@@ -448,7 +452,13 @@ span:hover{
     p {
         font-family: 'Poppins';
         font-size: 11pt;
-        padding-right: 30vh;
+        
+      }
+
+      footer{
+        padding: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
       }
 
     }
