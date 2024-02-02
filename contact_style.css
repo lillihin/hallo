@@ -1,0 +1,30 @@
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+    padding: 1em;
+
+    
+  
+  }
+
+  .kontakt-button {
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #2b2b2b;
+
+    font-family: 'Poppins';
+    font-size: 1em;}
+
+
+  
+
+   .kontakt-button:hover  {
+    text-decoration: underline;
+    color: blue;
+    text-decoration: none;
+  }
