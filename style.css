@@ -9,6 +9,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
+main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 .desktop {
     display: none;
 }
@@ -321,7 +327,8 @@ footer{
   footer {
     background-color:#2b2b2b;
     color: #FEFEFE;
-    padding: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     bottom: 0px;
     width: 100%;
     text-align: center;
