@@ -1,0 +1,55 @@
+
+@import url("https://use.typekit.net/naw5hqg.css");
+body {
+    /* background-color: rosybrown; */
+    margin: 0;
+    padding: 0;
+}
+
+header.desktop {
+    background-color: rgba(143, 143, 36, 0);
+position: absolute;
+
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+
+    
+}
+
+
+.rechts, .links {
+    font-size: 50pt;
+    text-align: center;
+    font-family: 'unbounded';
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-decoration: none;
+}
+.links {
+    
+    color: blue;
+    background-color: rgb(225, 255, 0);
+    
+}
+
+.rechts {
+    
+    color: rgb(225, 225, 0);
+    background-color: blue;
+    
+
+
+}
+
+@media all and (orientation: portrait) {
+    .links, .rechts {width: 100%; min-height: 50vh;}
+}
